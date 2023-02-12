@@ -40,7 +40,7 @@ export default async function RootLayout({
           <SupabaseListener serverAccessToken={accessToken} />
           <MenuProvider>
             <Menu links={links} />
-            <Header token={accessToken} links={links} />
+            <Header token={accessToken} id={session?.user.id} links={links} />
             <div className="mt-16">{children}</div>
           </MenuProvider>
         </SupabaseProvider>

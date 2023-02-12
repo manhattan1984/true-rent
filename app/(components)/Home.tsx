@@ -3,13 +3,23 @@ import React from "react";
 import { BsBookmark } from "react-icons/bs";
 
 const Home = ({
-  image,
+  image_url,
   price,
   description,
+  created_at,
+  no_of_rooms,
+  state,
+  town,
+  area,
 }: {
-  image: string;
+  image_url: string;
   price: number;
   description: string;
+  created_at: Date;
+  no_of_rooms: number;
+  state: string;
+  town: string;
+  area: string;
 }) => {
   return (
     <div className="w-5/6 mx-auto flex flex-col gap-3 p-2 bg-white rounded shadow">
@@ -17,7 +27,7 @@ const Home = ({
         <Image
           className="rounded-md"
           alt={description}
-          src={image}
+          src={image_url}
           fill={true}
         />
       </div>
@@ -31,7 +41,15 @@ const Home = ({
           </p>
           <BsBookmark className="font-bold cursor-pointer" />
         </div>
-        <p className="text-sm">{description}</p>
+        <div className="">
+          <p className="font-semibold">{area}</p>
+          <div className="flex gap-2 text-sm">
+            <p>
+              {town}, {state}
+            </p>
+          </div>
+          <p className="text-sm">{description}</p>
+        </div>
       </div>
     </div>
   );
