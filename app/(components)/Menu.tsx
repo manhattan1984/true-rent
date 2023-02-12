@@ -25,7 +25,7 @@ const Menu = ({ links }) => {
   return (
     <>
       <div
-        className={`absolute top-0 z-50 ease-in-out duration-300 
+        className={`fixed top-0 z-50 ease-in-out duration-300 
         ${showHomeMenu ? "" : "translate-x-full"}
          h-screen w-screen bg-neutral-100 text-sky-900 flex flex-col justify-between p-4 font-bold`}
       >
